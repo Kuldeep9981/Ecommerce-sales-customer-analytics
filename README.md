@@ -2,7 +2,7 @@
 
 This project provides end-to-end analysis of the Superstore dataset, covering data cleaning, SQL insights, and an interactive Power BI dashboard.
 
-📁 Project Overview/n
+📁 Project Overview
 The workflow includes:
 Data Cleaning using Python (Pandas)
 Storing & Querying in MySQL
