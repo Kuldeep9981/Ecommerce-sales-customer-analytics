@@ -136,53 +136,42 @@ The dashboard contains three main pages:
 1️⃣ Ecommerce Sales Overview
 
 Total Revenue
-
 Total Profit
-
 Profit Margin %
-
 Total Orders
-
 Total Quantity
-
 Monthly Revenue Trend
-
 Revenue by Platform
-
 Profit by Platform
-
 Revenue by Product Category
-
 
 2️⃣ Product Performance Analysis
 
 Top 10 SKUs by Revenue
-
 Bottom 10 SKUs by Profit
-
 Quantity vs Profit Scatter Plot
-
 Product Category vs SKU Performance Table
-
 
 3️⃣ Customer Analytics
 
 Total Customers
-
 Revenue by Customer Type
-
 Customer Type Distribution
-
 Top 10 Customers by Revenue
-
 Region Distribution by Customer Count
-
 Region Distribution by Revenue
 
 
-Power BI file:
+##  Power BI Dashboard
 
-powerbi_dashboard.pbix
+### Ecommerce Sales Overview
+![Overview](overview.png)
+
+### Product Performance Analysis
+![Product Performance](product_performance.png)
+
+### Customer Analytics
+![Customer Analytics](customer_analytics.png)
 
 
 ---
@@ -227,7 +216,6 @@ Promote high-performing SKUs across platforms
 ✅ Conclusion
 
 This project demonstrates the complete analytics lifecycle from raw data to business insights using Python, SQL, and Power BI. It reflects real-world analytical thinking and problem-solving skills required for entry-level data analyst roles.
-
 
 
 
