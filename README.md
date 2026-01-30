@@ -1,4 +1,4 @@
-# 🛒 E-commerce Sales & Customer Analytics using SQL, Python, and Power BI
+# E-commerce Sales & Customer Analytics using SQL, Python, and Power BI
 
 ## 📌 Project Overview
 
@@ -7,182 +7,227 @@ The analysis was performed using Python for data cleaning and EDA, SQL for busin
 
 ---
 
-## 🎯 Objectives
-
-* Clean and preprocess raw superstore data
-* Store structured data in a relational database (MySQL)
-* Perform SQL queries to generate KPIs and insights
-* Build interactive dashboards using Power BI
-* Identify profit drivers, loss areas, and growth opportunities
 
 ---
 
-## 📂 Dataset
+🎯 Business Objectives
 
-* **Type:** Retail Superstore Sales Data
-* **Data Includes:**
+Understand overall sales and profit performance
 
-  * Order details
-  * Customer information
-  * Product categories & sub-categories
-  * Sales, profit, quantity, discount
-  * Shipping mode
-  * Region & segment
+Identify top and underperforming products
 
----
+Analyze customer segments and purchasing behavior
 
-## ⚙️ Tools & Technologies Used
+Evaluate platform-wise performance
 
-| Tool / Technology | Purpose                                |
-| ----------------- | -------------------------------------- |
-| Python            | Data cleaning & transformation         |
-| Pandas            | Data preprocessing                     |
-| MySQL             | Data storage & SQL analysis            |
-| SQL               | KPI extraction & business queries      |
-| Power BI          | Interactive dashboards & visualization |
+Study regional contribution to revenue
+
+Highlight loss-making areas and improvement opportunities
+
+
 
 ---
 
-## 🔍 Project Workflow
+📂 Dataset Information
 
-### 1️⃣ Data Cleaning & Transformation
+The dataset contains transactional e-commerce sales records including:
 
-* Loaded raw superstore data using **Pandas**
-* Removed inconsistencies and prepared data for analysis
-* Structured data into tabular format
+Order ID, Order Date, Ship Date
 
-### 2️⃣ Database Integration (MySQL)
+Customer ID, Customer Type (Consumer, Corporate, Home Office)
 
-* Imported cleaned dataset into **MySQL**
-* Created a `superstore` table
-* Performed multiple SQL queries to extract insights
+SKU / Product Sub-Category, Product Category
 
-### 3️⃣ SQL Analysis & KPIs
+Quantity, Revenue, Profit
 
-Key KPIs generated using SQL:
+Region, Ship Mode
 
-* Total Sales
-* Total Profit
-* Total Quantity Sold
-* Distinct Customers Count
 
-**KPI Summary:**
-
-* 💰 Sales: ~2.27M
-* 📈 Profit: ~282.86K
-* 📦 Quantity: ~37K
-* 👥 Customers: 793
 
 ---
 
-## 📊 Key Analyses Performed
+🛠 Tools & Technologies
 
-### 📅 Sales & Profit Trends
+Python (Pandas, NumPy)
 
-* Quarterly and yearly trend analysis (2014–2017)
-* Identified seasonal peaks (Q4 performance)
+SQL (MySQL)
 
-### 🧾 Category Analysis
+Power BI
 
-* Technology is the most profitable category
-* Furniture shows lowest profit contribution
+Google Colab
 
-### 🌍 Regional Performance
 
-* West region contributes highest profit
-* South region underperforms
-
-### 🧑‍🤝‍🧑 Customer & Segment Insights
-
-* Consumer segment generates maximum profit
-* Home Office segment lags behind
-
-### 🚚 Shipping Analysis
-
-* First Class shipping delivers fastest (avg ~2.3 days)
-
-### 💸 Discount & Profitability
-
-* 808 orders with >50% discount but negative profit
-* Indicates inefficient discount strategies
-
-### 📦 Product Performance
-
-* Copiers, Phones, Accessories are top performers
-* Tables & Bookcases show high sales but low profit margins
 
 ---
 
-## 📈 Power BI Dashboard Features
+🔄 Project Workflow
 
-* KPI Cards (Sales, Profit, Quantity)
-* Profit by Year & Quarter (Line Chart)
-* Profit by Category & Region (Pie Charts)
-* Profit by Segment (Donut Chart)
-* Profit by Sub-Category (Bar Chart)
-* Interactive filters (Region, Category, Year)
+1. Data Cleaning and EDA using Python
 
----
 
-## 🧠 Business Insights & Recommendations
+2. Data exploration and feature understanding
 
-### 🔹 Profit Growth
 
-* Strong upward profit trend from 2014–2017
-* Seasonal peaks in Q4
+3. SQL queries for business KPIs and insights
 
-**Recommendation:** Increase inventory & marketing before peak seasons
 
-### 🔹 Category Strategy
+4. Power BI dashboard development
 
-* Technology drives over 50% of profit
-* Furniture underperforms
 
-**Recommendation:** Promote Technology, re-evaluate Furniture pricing
+5. Insight generation and recommendations
 
-### 🔹 Regional Optimization
 
-* West & East regions generate ~70% of profit
-* South region needs improvement
 
-**Recommendation:** Region-specific strategies & logistics review
-
-### 🔹 Discount Control
-
-* High discounts lead to losses
-
-**Recommendation:** Reassess discount policies on low-margin products
 
 ---
 
-## 🏗️ System Architecture
+📓 Python (Data Cleaning & EDA)
 
-* **Data Processing:** Python (Pandas)
-* **Database Layer:** MySQL
-* **Analysis Layer:** SQL Queries
-* **Visualization Layer:** Power BI Dashboard
+Handled missing values and data type issues
 
----
+Verified date formats
 
-## 🚀 Future Enhancements
+Performed descriptive statistics
 
-* Automate data pipeline using ETL tools
-* Add predictive analytics (sales forecasting)
-* Integrate Python with Power BI for live updates
-* Deploy dashboards on Power BI Service
+Checked revenue and profit distributions
 
----
+Created derived columns where required
 
-## 👨‍🎓 Author
 
-* **Kuldeep Patidar**
-  Data Analyst / Data Science Student
+Notebook available in:
+
+notebooks/data_cleaning_eda.ipynb
+
 
 ---
 
-## 📜 Conclusion
+🧮 SQL Analysis
 
-This project showcases the power of combining **Python, SQL, and Power BI** for business analytics. By transforming raw retail data into insightful dashboards and recommendations, the project demonstrates practical data analysis skills applicable to real-world business problems.
+SQL was used to answer key business questions:
 
-⭐ *If you like this project, don’t forget to star the repository!*
+Total sales, profit, quantity, and orders
+
+Monthly sales trends
+
+Sales and profit by category, region, and segment
+
+Top customers and top-selling products
+
+Products with negative profit
+
+Discount impact analysis
+
+Repeat and low-frequency customers
+
+Shipping mode performance
+
+
+All queries are available in:
+
+sql_queries.sql
+
+
+---
+
+📊 Power BI Dashboard
+
+The dashboard contains three main pages:
+
+1️⃣ Ecommerce Sales Overview
+
+Total Revenue
+
+Total Profit
+
+Profit Margin %
+
+Total Orders
+
+Total Quantity
+
+Monthly Revenue Trend
+
+Revenue by Platform
+
+Profit by Platform
+
+Revenue by Product Category
+
+
+2️⃣ Product Performance Analysis
+
+Top 10 SKUs by Revenue
+
+Bottom 10 SKUs by Profit
+
+Quantity vs Profit Scatter Plot
+
+Product Category vs SKU Performance Table
+
+
+3️⃣ Customer Analytics
+
+Total Customers
+
+Revenue by Customer Type
+
+Customer Type Distribution
+
+Top 10 Customers by Revenue
+
+Region Distribution by Customer Count
+
+Region Distribution by Revenue
+
+
+Power BI file:
+
+powerbi_dashboard.pbix
+
+
+---
+
+📈 Key Insights
+
+Technology category contributes the highest revenue share
+
+Furniture category contains multiple loss-making sub-categories
+
+Phones and Chairs are top revenue-generating SKUs
+
+Tables and Bookcases show negative profitability
+
+Consumer segment contributes the largest share of revenue
+
+West and East regions generate the highest revenue
+
+Some SKUs have high quantity sold but low or negative profit
+
+Platform-wise revenue is fairly balanced across marketplaces
+
+
+
+---
+
+💡 Business Recommendations
+
+Focus marketing and inventory planning on high-profit categories (Technology)
+
+Review pricing and discount strategy for Furniture products
+
+Reduce excessive discounting on low-margin SKUs
+
+Improve strategy in underperforming regions
+
+Promote high-performing SKUs across platforms
+
+
+
+---
+✅ Conclusion
+
+This project demonstrates the complete analytics lifecycle from raw data to business insights using Python, SQL, and Power BI. It reflects real-world analytical thinking and problem-solving skills required for entry-level data analyst roles.
+
+
+
 
