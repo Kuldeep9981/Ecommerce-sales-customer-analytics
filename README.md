@@ -1,10 +1,9 @@
-# 🛒 Superstore Data Analysis & Business Insights
+# 🛒 E-commerce Sales & Customer Analytics using SQL, Python, and Power BI
 
 ## 📌 Project Overview
 
-This project focuses on **end-to-end data analysis of a retail Superstore dataset** to extract meaningful business insights. The objective is to analyze sales, profit, customers, products, regions, and shipping performance using **Python, SQL, and Power BI**.
-
-The project demonstrates how raw business data can be transformed into **actionable insights** that help improve profitability, optimize operations, and support data-driven decision-making.
+This project focuses on analyzing e-commerce sales data to identify trends in revenue, product performance, customer behavior, and profitability. 
+The analysis was performed using Python for data cleaning and EDA, SQL for business queries, and Power BI for interactive dashboards to support data-driven decision-making.
 
 ---
 
