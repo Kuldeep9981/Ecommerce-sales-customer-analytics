@@ -124,16 +124,19 @@ SQL queries answered the following business questions:
 ## 📊 Power BI Dashboard
 
 ### Page 1 — Ecommerce Sales Overview
+![Sales Overview](assets/sales_overview.png)
 Total Revenue, Total Profit, Profit Margin %, Total Orders,
 Total Quantity, Monthly Revenue Trend, Revenue by Platform,
 Profit by Platform, Revenue by Product Category
 
 ### Page 2 — Product Performance Analysis
+![Product Performance](assets/product_performance.png)
 Top 10 SKUs by Revenue, Bottom 10 SKUs by Profit,
 Quantity vs Profit Scatter Plot,
 Product Category vs SKU Performance Table
 
 ### Page 3 — Customer Analytics
+![Customer Analytics](assets/customer_analytics.png)
 Total Customers, Revenue by Customer Type,
 Customer Type Distribution, Top 10 Customers by Revenue,
 Region Distribution by Customer Count and Revenue
