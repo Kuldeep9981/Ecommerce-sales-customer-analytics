@@ -1,221 +1,188 @@
-# E-commerce Sales & Customer Analytics using SQL, Python, and Power BI
+# E-commerce Sales & Customer Analytics
+### Python | SQL | Power BI | MySQL | Google Colab
 
 ## 📌 Project Overview
-
-This project focuses on analyzing e-commerce sales data to identify trends in revenue, product performance, customer behavior, and profitability. 
-The analysis was performed using Python for data cleaning and EDA, SQL for business queries, and Power BI for interactive dashboards to support data-driven decision-making.
-
----
-
-
----
-
-🎯 Business Objectives
-
-Understand overall sales and profit performance
-
-Identify top and underperforming products
-
-Analyze customer segments and purchasing behavior
-
-Evaluate platform-wise performance
-
-Study regional contribution to revenue
-
-Highlight loss-making areas and improvement opportunities
-
-
+This project analyzes 9,000+ e-commerce orders to identify revenue trends, 
+product profitability, discount impact, and regional performance. The analysis 
+covers end-to-end data analytics — from Python-based data cleaning and EDA, 
+to SQL business queries, statistical testing, sales forecasting, and an 
+interactive Power BI dashboard.
 
 ---
 
-📂 Dataset Information
-
-The dataset contains transactional e-commerce sales records including:
-
-Order ID, Order Date, Ship Date
-
-Customer ID, Customer Type (Consumer, Corporate, Home Office)
-
-SKU / Product Sub-Category, Product Category
-
-Quantity, Revenue, Profit
-
-Region, Ship Mode
-
-
+## 🎯 Business Objectives
+- Evaluate overall sales, profit, and margin performance
+- Identify top and loss-making products and categories
+- Analyze discount impact on profitability
+- Study regional revenue and margin contribution
+- Forecast future monthly revenue trends
+- Support data-driven decision-making through dashboards
 
 ---
 
-🛠 Tools & Technologies
+## 📂 Dataset Information
+| Column | Description |
+|---|---|
+| Order ID, Order Date, Ship Date | Transaction identifiers and dates |
+| Customer ID, Customer Type | Consumer, Corporate, Home Office |
+| Product Category, SKU, Product Name | Product classification |
+| Quantity, Revenue, Profit, Discount | Financial metrics |
+| Region, City, State, Ship Mode | Geographic and logistics info |
 
-Python (Pandas, NumPy)
-
-SQL (MySQL)
-
-Power BI
-
-Google Colab
-
-
-
----
-
-🔄 Project Workflow
-
-1. Data Cleaning and EDA using Python
-
-
-2. Data exploration and feature understanding
-
-
-3. SQL queries for business KPIs and insights
-
-
-4. Power BI dashboard development
-
-
-5. Insight generation and recommendations
-
-
-
+- Total Orders: 9,000+
+- Total Products: 1,811 distinct SKUs
+- Total Units Sold: 36,000+
+- Total Revenue: $2.2M
+- Total Profit: $260K
+- Total Customers: 793
 
 ---
 
-📓 Python (Data Cleaning & EDA)
-
-Handled missing values and data type issues
-
-Verified date formats
-
-Performed descriptive statistics
-
-Checked revenue and profit distributions
-
-Created derived columns where required
-
-
-Notebook available in:
-
-notebooks/data_cleaning_eda.ipynb
-
+## 🛠 Tools & Technologies
+| Tool | Purpose |
+|---|---|
+| Python (Pandas, NumPy, Seaborn, Matplotlib, Scipy) | Data cleaning, EDA, statistical analysis, forecasting |
+| MySQL | Business queries and KPI analysis |
+| Power BI | Interactive dashboard development |
+| Google Colab | Development environment |
 
 ---
 
-🧮 SQL Analysis
-
-SQL was used to answer key business questions:
-
-Total sales, profit, quantity, and orders
-
-Monthly sales trends
-
-Sales and profit by category, region, and segment
-
-Top customers and top-selling products
-
-Products with negative profit
-
-Discount impact analysis
-
-Repeat and low-frequency customers
-
-Shipping mode performance
-
-
-All queries are available in:
-
-sql_queries.sql
-
+## 🔄 Project Workflow
+1. Data cleaning and EDA using Python
+2. Discount impact and correlation analysis
+3. Sales forecasting using moving average
+4. Regional statistical analysis (ANOVA test)
+5. SQL queries for business KPIs
+6. Power BI dashboard development
+7. Insight generation and recommendations
 
 ---
 
-📊 Power BI Dashboard
+## 📓 Python Analysis
 
-The dashboard contains three main pages:
+### Data Cleaning & EDA
+- Handled missing values and data type issues
+- Verified and standardized date formats
+- Performed descriptive statistics on all numeric columns
+- Checked revenue, profit, and discount distributions
+- Created derived columns (discount buckets, year-month period)
 
-1️⃣ Ecommerce Sales Overview
+### Discount Impact Analysis
+- Calculated correlation between discount and profit: **-0.25**
+- Segmented orders into discount buckets to measure profit impact
+- Found profitability turns negative beyond **20% discount threshold**
 
-Total Revenue
-Total Profit,
-Profit Margin %,
-Total Orders,
-Total Quantity,
-Monthly Revenue Trend,
-Revenue by Platform,
-Profit by Platform,
-Revenue by Product Category
+| Discount Range | Avg Profit | Total Loss |
+|---|---|---|
+| 0% | +$63 | — |
+| 1-10% | +$96 | — |
+| 11-20% | +$24 | — |
+| 21-30% | -$45 | -$10,357 |
+| 31-50% | -$151 | -$46,645 |
+| 50%+ | -$93 | -$75,328 |
 
-2️⃣ Product Performance Analysis
+### Sales Forecasting (3-Month Moving Average)
+- Built a 3-month rolling moving average forecast on monthly revenue
+- Average actual monthly revenue: **$45,756**
+- Forecasted avg next 3 months: **$87,156**
+- Best performing month: **November 2017 ($106,883)**
+- Worst performing month: **February 2014**
+- Method: Moving Average chosen over Linear Regression due to 
+  seasonal patterns in data
 
-Top 10 SKUs by Revenue,
-Bottom 10 SKUs by Profit, 
-Quantity vs Profit Scatter Plot, 
+### Statistical Analysis
+- Built correlation heatmap across revenue, quantity, discount, profit
+- Key correlations found:
+  - Revenue & Profit: **+0.40** (moderate positive)
+  - Discount & Profit: **-0.25** (negative — discounts hurt profit)
+  - Quantity & Profit: **+0.08** (near zero — volume alone doesn't drive profit)
+- Conducted One-Way ANOVA test to validate regional revenue impact
+  - F-Statistic: 0.9064 | P-Value: **0.437**
+  - Result: Region alone does NOT significantly drive revenue
+  - Conclusion: Discount rate and product mix are stronger profitability drivers
+
+`notebooks/data_cleaning_eda.ipynb`
+
+---
+
+## 🧮 SQL Analysis
+SQL queries answered the following business questions:
+- Total sales, profit, quantity, and orders
+- Monthly sales and profit trends
+- Sales and profit by category, region, and segment
+- Top customers and top-selling products by revenue
+- Products with negative profit margins
+- Discount impact by category
+- Repeat vs low-frequency customers
+- Shipping mode performance analysis
+
+`sql_queries.sql`
+
+---
+
+## 📊 Power BI Dashboard
+
+### Page 1 — Ecommerce Sales Overview
+Total Revenue, Total Profit, Profit Margin %, Total Orders,
+Total Quantity, Monthly Revenue Trend, Revenue by Platform,
+Profit by Platform, Revenue by Product Category
+
+### Page 2 — Product Performance Analysis
+Top 10 SKUs by Revenue, Bottom 10 SKUs by Profit,
+Quantity vs Profit Scatter Plot,
 Product Category vs SKU Performance Table
 
-3️⃣ Customer Analytics
-
-Total Customers, 
-Revenue by Customer Type, 
-Customer Type Distribution, 
-Top 10 Customers by Revenue, 
-Region Distribution by Customer Count, 
-Region Distribution by Revenue
-
-
-##  Power BI Dashboard
-
-### Ecommerce Sales Overview
-![Overview](overview.png)
-
-### Product Performance Analysis
-![Product Performance](product_performance.png)
-
-### Customer Analytics
-![Customer Analytics](customer_analytics.png)
-
+### Page 3 — Customer Analytics
+Total Customers, Revenue by Customer Type,
+Customer Type Distribution, Top 10 Customers by Revenue,
+Region Distribution by Customer Count and Revenue
 
 ---
 
-📈 Key Insights
+## 📈 Key Insights
 
-Technology category contributes the highest revenue share
+- **Technology** is the highest revenue-generating category;
+  **Furniture SKUs** (Tables & Bookcases) generate negative profit margins
+  despite significant sales volume
+- **Discount is the #1 profitability killer** — correlation of -0.25 confirmed;
+  orders above 20% discount consistently lose money
+- **Central region** has the lowest profit margin (**6.6%**) despite $480K revenue,
+  caused by highest avg discount rate of **23.8%**
+- **South region** records the lowest revenue (**$366K**),
+  indicating untapped market potential
+- **West region** leads in both revenue (**$699K**) and profit margin (**14.2%**)
+  with the lowest avg discount rate of **11%**
+- **Quantity does not equal profit** — correlation between quantity and profit
+  is only 0.08, meaning high-volume SKUs are not necessarily profitable
+- **ANOVA test confirms** region alone does not significantly impact revenue
+  (p=0.437) — product mix and discount strategy matter more
+- **Q4 seasonality** is strong — November 2017 recorded peak revenue of
+  **$106,883**, nearly 2.5x the historical monthly average
 
-Furniture category contains multiple loss-making sub-categories
+---
 
-Phones and Chairs are top revenue-generating SKUs
+## 💡 Business Recommendations
 
-Tables and Bookcases show negative profitability
-
-Consumer segment contributes the largest share of revenue
-
-West and East regions generate the highest revenue
-
-Some SKUs have high quantity sold but low or negative profit
-
-Platform-wise revenue is fairly balanced across marketplaces
-
-
+- **Cap discounts at 20%** — data confirms profitability turns negative beyond
+  this threshold across all categories and regions
+- **Audit Central region pricing** — reducing avg discount from 23.8% to match
+  West region's 11% could more than double the profit margin
+- **Deprioritize volume-based KPIs** — shift focus to margin per order rather
+  than units sold, as quantity has near-zero profit correlation
+- **Invest in South region growth** — lowest revenue region with decent 13%
+  margin suggests room for revenue expansion without sacrificing profitability
+- **Protect Q4 momentum** — plan inventory and marketing investment around
+  November-December seasonal peak
+- **Review Furniture pricing strategy** — Tables and Bookcases consistently
+  generate negative margins; consider price revision or discontinuation
 
 ---
 
-💡 Business Recommendations
-
-Focus marketing and inventory planning on high-profit categories (Technology)
-
-Review pricing and discount strategy for Furniture products
-
-Reduce excessive discounting on low-margin SKUs
-
-Improve strategy in underperforming regions
-
-Promote high-performing SKUs across platforms
-
-
-
----
-✅ Conclusion
-
-This project demonstrates the complete analytics lifecycle from raw data to business insights using Python, SQL, and Power BI. It reflects real-world analytical thinking and problem-solving skills required for entry-level data analyst roles.
-
-
+## ✅ Conclusion
+This project demonstrates a complete data analytics lifecycle — from raw data
+cleaning to statistical analysis, forecasting, and business intelligence
+dashboards. It applies Python, SQL, and Power BI to solve real business problems
+around profitability, discounting strategy, and regional performance — reflecting
+the analytical thinking required for data analyst roles.
 
