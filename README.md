@@ -130,7 +130,7 @@ Total Quantity, Monthly Revenue Trend, Revenue by Platform,
 Profit by Platform, Revenue by Product Category
 
 ### Page 2 — Product Performance Analysis
-![Product Performance](product_performance.png )
+![Product Performance](product_performance.png)
 Top 10 SKUs by Revenue, Bottom 10 SKUs by Profit,
 Quantity vs Profit Scatter Plot,
 Product Category vs SKU Performance Table
