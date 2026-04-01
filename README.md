@@ -124,7 +124,7 @@ SQL queries answered the following business questions:
 ## 📊 Power BI Dashboard
 
 ### Page 1 — Ecommerce Sales Overview
-![Sales Overview](assets/overview.png)
+![Sales Overview](overview.png)
 Total Revenue, Total Profit, Profit Margin %, Total Orders,
 Total Quantity, Monthly Revenue Trend, Revenue by Platform,
 Profit by Platform, Revenue by Product Category
